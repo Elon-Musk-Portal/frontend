@@ -1,12 +1,14 @@
-import React from 'react';
+import React, {Component} from 'react';
 import './App.css';
+import {TweetListComponent} from "./tracks/tweets/tweet-list.component";
 
-function App() {
-    return (
-        <div className="App">
+export default class App extends Component {
 
-        </div>
-    );
+    render() {
+        return (
+            <div className="App">
+                <TweetListComponent/>
+            </div>
+        );
+    }
 }
-
-export default App;
