@@ -6,18 +6,20 @@ interface IProps {
 }
 
 interface IState {
-    listTweets: Array<TweetModel>;
+    listTweets: Array<Tweet>;
     isReady: Boolean;
     hasError: Boolean;
 }
 
-class TweetModel {
+class Tweet {
     id: number;
     tweetId: string;
+    created: Date;
 
-    constructor(id: number, tweetId: string) {
+    constructor(id: number, tweetId: string, created: Date) {
         this.id = id;
         this.tweetId = tweetId;
+        this.created = created
     }
 }
 
@@ -27,7 +29,7 @@ export class TweetListComponent extends React.Component<IProps, IState> {
         super(props);
         this.state = {
             isReady: false,
-            listTweets: Array<TweetModel>(),
+            listTweets: Array<Tweet>(),
             hasError: false,
         };
     }
@@ -51,15 +53,10 @@ export class TweetListComponent extends React.Component<IProps, IState> {
             return (
                 <div>
                     {
-                        this.state.listTweets.map((object, i) => {
+                        this.state.listTweets.reverse().map((object, i) => {
                             return <div key={i}>
                                 <TwitterTweetEmbed
                                     tweetId={object.tweetId}
-                                    options={
-                                        {
-                                            "data-lang": "ru"
-                                        }
-                                    }
                                 />
                             </div>;
                         })
