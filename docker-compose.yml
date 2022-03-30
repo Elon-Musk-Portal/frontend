@@ -10,4 +10,4 @@ services:
       - './:/app'
       - '/app/node_modules'
     ports:
-      - "443:3000"
+      - "3000:3000"
