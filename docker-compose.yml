@@ -18,7 +18,7 @@ services:
       - frontend
     restart: always
     volumes:
-      - ./nginx:/etc/nginx/conf.d
+      - ./nginx:/etc/nginx/default.conf
     ports:
       - "80:80"
       - "443:443"
