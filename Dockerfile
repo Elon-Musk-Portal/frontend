@@ -5,6 +5,3 @@ RUN npm install
 COPY . .
 EXPOSE 3000
 CMD [ "npm", "start" ]
-
-FROM nginx
-COPY ./default.conf /etc/nginx/conf.d/default.conf
