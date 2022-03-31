@@ -13,11 +13,12 @@ services:
       - "3000:3000"
   nginx:
     container_name: nginx
+    image: nginx:1.21.6
     depends_on:
       - frontend
     restart: always
-    build:
-      dockerfile: Dockerfile
-      context: ./nginx
+    volumes:
+      - ./nginx:/etc/nginx/conf.d
     ports:
       - "80:80"
+      - "443:443"
