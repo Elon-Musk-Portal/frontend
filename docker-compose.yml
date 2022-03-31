@@ -11,3 +11,12 @@ services:
       - '/app/node_modules'
     ports:
       - "3000:3000"
+  nginx:
+    depends_on:
+      - frontend
+    restart: always
+    build:
+      dockerfile: Dockerfile
+      context: ./nginx
+    ports:
+      - "3050:80"
