@@ -11,14 +11,3 @@ services:
       - '/app/node_modules'
     ports:
       - "80:3000"
-#  nginx:
-#    container_name: nginx
-#    image: nginx:1.21.6
-#    depends_on:
-#      - frontend
-#    restart: always
-#    volumes:
-#      - ./nginx/conf.d:/etc/nginx/conf.d
-#    ports:
-#      - "80:80"
-#      - "443:443"
