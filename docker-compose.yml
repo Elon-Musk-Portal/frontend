@@ -12,6 +12,7 @@ services:
     ports:
       - "3000:3000"
   nginx:
+    container_name: nginx
     depends_on:
       - frontend
     restart: always
@@ -19,4 +20,4 @@ services:
       dockerfile: Dockerfile
       context: ./nginx
     ports:
-      - "3050:80"
+      - "80:80"
