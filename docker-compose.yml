@@ -13,10 +13,9 @@ services:
     ports:
       - "3000:3000"
   nginx:
+    container_name: nginx-frontend
     image: nginx:1.21.6
-    container_name: nginx
     ports:
-      - "80:80"
       - "443:443"
     restart: always
     volumes:
