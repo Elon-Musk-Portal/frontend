@@ -7,9 +7,9 @@ services:
       dockerfile: Dockerfile
       context: .
     volumes:
-      - '/app'
-      - '/app/node_modules'
-      - /etc/letsencrypt/live/programistich.com/:/etc/letsencrypt/live/programistich.com/
+      - /app
+      - /app/node_modules
+      - /etc/letsencrypt/live/:/etc/letsencrypt/live/
     ports:
       - "3000:3000"
   nginx:
