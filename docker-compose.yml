@@ -17,6 +17,7 @@ services:
     image: nginx:1.21.6
     ports:
       - "443:443"
+      - "80:80"
     restart: always
     volumes:
       - /etc/letsencrypt/:/etc/letsencrypt/
