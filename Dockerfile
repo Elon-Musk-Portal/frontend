@@ -8,5 +8,5 @@ RUN npm run build
 
 FROM nginx:1.15.10-alpine
 COPY --from=build /app/build /var/www
-COPY ./nginx/nginx.conf /etc/nginx/nginx.conf
+COPY ./nginx/default.conf /etc/nginx/default.conf
 CMD ["nginx", "-g", "daemon off;"]
