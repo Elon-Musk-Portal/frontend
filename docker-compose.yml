@@ -20,4 +20,5 @@ services:
       - "80:80"
     volumes:
       - /etc/letsencrypt/:/etc/letsencrypt/
+      - /app/build:/var/www
       - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
