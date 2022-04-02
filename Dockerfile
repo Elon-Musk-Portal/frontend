@@ -6,7 +6,7 @@
 #EXPOSE 3000
 #CMD [ "npm", "start" ]
 
-FROM node:11.13 as builder
+FROM node:16.3-alpine as builder
 
 RUN mkdir /app
 WORKDIR /app
