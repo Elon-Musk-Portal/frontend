@@ -2,8 +2,8 @@ FROM node:16.3-alpine as build
 WORKDIR /app
 COPY package*.json ./
 COPY . .
-RUN npm ci
-RUN npm run build && rm -rf node_modules/
+RUN npm ci -g nodemon
+RUN npm run build
 
 FROM nginx:1.21.6
 COPY --from=build /app/build /usr/share/nginx/html
