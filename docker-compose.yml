@@ -10,8 +10,8 @@ services:
       - /app
       - /app/node_modules
       - /etc/letsencrypt/live/:/etc/letsencrypt/live/
-    ports:
-      - "3000:3000"
+#    ports:
+#      - "3000:3000"
   nginx:
     container_name: nginx-frontend
     image: nginx:1.21.6
