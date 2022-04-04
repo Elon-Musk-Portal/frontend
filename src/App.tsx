@@ -9,7 +9,7 @@ export default class App extends Component {
         return (
             <div className="App">
                 <div><TweetListComponent/></div>
-                <div><TelegramLogin/></div>
+                {/*<div><TelegramLogin/></div>*/}
             </div>
         );
     }
