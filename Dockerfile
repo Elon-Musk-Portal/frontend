@@ -2,7 +2,7 @@ FROM node:16.3-alpine as build
 WORKDIR /app
 COPY package*.json ./
 COPY . .
-RUN npm install
+RUN npm ci
 RUN npm run build
 
 FROM nginx:1.21.6-alpine
