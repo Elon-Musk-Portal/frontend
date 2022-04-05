@@ -10,6 +10,7 @@ services:
     stdin_open: true
     environment:
       - NGINX_API_HOST
+      - NGINX_API_PORTAL
     volumes:
       - /app
       - /app/node_modules
