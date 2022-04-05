@@ -8,10 +8,6 @@ services:
       context: .
     restart: always
     stdin_open: true
-    environment:
-      - NGINX_API_HOST
-      - NGINX_API_PORTAL
-      - NGINX_URL_DOMAIN
     volumes:
       - /app
       - /app/node_modules
